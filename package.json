@@ -1,0 +1,48 @@
+{
+  "name": "rx-flux-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint app/**",
+    "ci": "npm run lint && TEST_ENV=CI npm t",
+    "prebuild": "npm run ci && rm -rf dist",
+    "build": "webpack --config webpack.config.js -p",
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpsxp/rx-flux-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpsxp/rx-flux-store/issues"
+  },
+  "homepage": "https://github.com/dpsxp/rx-flux-store#readme",
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "6.2.4",
+    "babel-plugin-lodash": "^3.2.5",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "es6-promise": "^3.2.1",
+    "eslint": "2.13.1",
+    "eslint-config-airbnb": "9.0.1",
+    "eslint-plugin-import": "1.11.0",
+    "karma": "^1.1.1",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.0.4",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sinon": "^1.0.5",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4",
+    "webpack": "1.13.1"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "rx": "^4.1.0"
+  }
+}
